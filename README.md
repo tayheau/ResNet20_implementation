@@ -8,7 +8,7 @@ According to the original ResNet paper [1][1], he author discusses the case of C
 $$
 \begin{array}{|c|c|c|c|}
 \hline
-\textbf{output map size} & \textbf{32 \times 32} & \textbf{16 \times 16} & \textbf{8 \times 8} \\ \hline
+\textbf{output map size} & \textbf{32 x 32} & \textbf{16 x 16} & \textbf{8 x 8} \\ \hline
 \# \text{layers} & 1 + 2n & 2n & 2n \\ \hline
 \# \text{filters} & 16 & 32 & 64 \\ \hline
 \end{array}
