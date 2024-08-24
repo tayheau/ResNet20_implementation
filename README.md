@@ -3,7 +3,7 @@
 This repo is designed to be used on a google collab instance.
 
 You can play with the hyperparameters in the `train.py` file. 
-According to the original ResNet paper [^1], he author discusses the case of CIFAR10 in section 4.2 CIFAR-10 and Analysis, providing the following table:
+According to the original ResNet paper[^1], he author discusses the case of CIFAR10 in section 4.2 CIFAR-10 and Analysis, providing the following table:
 
 | **output map size** | **32 x 32** | **16 x 16** | **8 x 8** |
 |---------------------|-------------|-------------|-----------|
