@@ -14,5 +14,8 @@ $$
 \end{array}
 $$
 
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
 ## Bibliography
 [1] : Kaiming He et al. *Deep Residual Learning for Image Recognition.* 2015. arXiv: 1512. 03385 [cs.CV](https://arxiv.org/abs/1512.03385).
