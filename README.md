@@ -3,7 +3,7 @@
 This repo is designed to be used on a google collab instance.
 
 You can play with the hyperparameters in the `train.py` file. 
-According to the original ResNet paper footnote[^1], he author discusses the case of CIFAR10 in section 4.2 CIFAR-10 and Analysis, providing the following table:
+According to the original ResNet paper [[1]](#1), he author discusses the case of CIFAR10 in section 4.2 CIFAR-10 and Analysis, providing the following table:
 
 | **output map size** | **32 x 32** | **16 x 16** | **8 x 8** |
 |---------------------|-------------|-------------|-----------|
@@ -29,9 +29,6 @@ To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss
   a train accuracy of ~ 91% is achieved on cifar10 with a validation accuracy of 83%.As for testing accuracy, we’re at around 84%, which is a pretty good performance for a model that’s not that deep.
   
 ## Bibliography
-Kaiming He et al. *Deep Residual Learning for Image Recognition.* 2015. arXiv: [1512. 03385 [cs.CV]](https://arxiv.org/abs/1512.03385).
+<a id="1">[1]</a> : Kaiming He et al. *Deep Residual Learning for Image Recognition.* 2015. arXiv: [1512. 03385 [cs.CV]](https://arxiv.org/abs/1512.03385).
 
 [^2] : Leslie N. Smith and Nicholay Topin. *Super-Convergence: Very Fast Training of Neu- ral Networks Using Large Learning Rates.* 2018. arXiv: [1708.07120 [cs.LG]](https://arxiv.org/abs/1708.07120).
-
-
-[^1]: My reference.
