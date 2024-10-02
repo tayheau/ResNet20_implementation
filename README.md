@@ -40,7 +40,7 @@ To train with a specific model (e.g., ResNet9) and custom hyperparams:
 ```python
 python train.py --model ResNet9 --epochs 15 --learning-rate 0.01 --batch-size 32 --save-path checkpoints/ --data data/
 ```
-###Available Options:
+### Available Options:
   - `--model`: Selects the model to use (ResNet9 or ResNet20).
   - `--epochs`: Number of epochs for training.
   - `--learning-rate`: Learning rate for the optimizer.
