@@ -1,10 +1,14 @@
 ![resnet](resnet.png)
 # ResNet Model Training and Evaluation
 
-This repo is designed to be used on a google collab instance.
+## Description
+This repo focus on training and evaluating __ResNet__ models for image classification. Possible to experiment with different ResNet architecture (e.g., ResNet9 and ResNet20) and custom hyperparams like *lr*, *batch size* and *epochs*.
 
-You can play with the hyperparameters in the `train.py` file. 
-According to the original ResNet paper[[1]](#1), he author discusses the case of CIFAR10 in section 4.2 CIFAR-10 and Analysis, providing the following table:
+This repo is best suited to be used in a __Google Collab__ instance.
+
+## Key Features and Concepts
+### ResNet Architecture : 
+According to the original ResNet paper[[1]](#1), the author discusses the case of CIFAR10 in section 4.2 CIFAR-10 and Analysis, providing the following table:
 
 | **output map size** | **32 x 32** | **16 x 16** | **8 x 8** |
 |---------------------|-------------|-------------|-----------|
@@ -14,13 +18,11 @@ According to the original ResNet paper[[1]](#1), he author discusses the case of
 **Table: ResNet parameters for CIFAR-10**
 
 Choosed $n=1$ for simplicity, leading to a ResNet20 architecture.
+### Data Augmentation
+The model’s ability to generalize must therefore be high. Data augmentation  Similarly, to speed up the training process, the dataset is normalized. Thoses transformations are only used on the training set. The validation and testing one are not altered by it.
 
-## Data Augmentation
-The model’s ability to generalize must therefore be high.
-To achieve this, I have then modified the code in order to apply data augmentation. To to so, I applied random transformations to the dataset, such as shifts, zooms and horizontal flips. Similarly, to speed up the training process, the dataset is normalized. Thoses transformations are only used on the training set. The validation and testing one are not altered by it.
-
-## Learning rate scheduler
-The OneCycleLR, introduced in this paper[[2]](#2) is applied.
+### OneCycle Learning Rate Policy: 
+This project utilizes the OneCycleLR scheduler[[2]](#2) to dynamically adjust the learning rate during training, which can lead to faster convergence and better performance.
 
 ## Results
 To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss are both used. With the following hyperparameters : 
@@ -33,3 +35,5 @@ To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss
 <a id="1">[1]</a> : Kaiming He et al. *Deep Residual Learning for Image Recognition.* 2015. arXiv: [1512. 03385 [cs.CV]](https://arxiv.org/abs/1512.03385).
 
 <a id="2">[2]</a> : Leslie N. Smith and Nicholay Topin. *Super-Convergence: Very Fast Training of Neu- ral Networks Using Large Learning Rates.* 2018. arXiv: [1708.07120 [cs.LG]](https://arxiv.org/abs/1708.07120).
+
+<a id="3">[3]</a> : GE Hinton et al. *Improving neural networks by preventing co-adaptation of feature detectors.* 2012. arXiv: [1207.0580 [cs.NE]](https://arxiv.org/abs/1207.0580)
