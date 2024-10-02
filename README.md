@@ -41,12 +41,12 @@ To train with a specific model (e.g., ResNet9) and custom hyperparams:
 python train.py --model ResNet9 --epochs 15 --learning-rate 0.01 --batch-size 32 --save-path checkpoints/ --data data/
 ```
 ###Available Options:
-`--model`: Selects the model to use (ResNet9 or ResNet20).
-`--epochs`: Number of epochs for training.
-`--learning-rate`: Learning rate for the optimizer.
-`--batch-size`: Batch size for the training data.
-`--save-path`: Directory to save the model checkpoints.
-`--data`: Directory where the dataset is stored.
+  - `--model`: Selects the model to use (ResNet9 or ResNet20).
+  - `--epochs`: Number of epochs for training.
+  - `--learning-rate`: Learning rate for the optimizer.
+  - `--batch-size`: Batch size for the training data.
+  - `--save-path`: Directory to save the model checkpoints.
+  - `--data`: Directory where the dataset is stored.
 
 ## Results
 To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss are both used. With the following hyperparameters : 
