@@ -1,4 +1,4 @@
-# ResNet20 recreation with PyTorch
+# ResNet Model Training and Evaluation
 
 This repo is designed to be used on a google collab instance.
 
