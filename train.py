@@ -115,20 +115,18 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='2023 DL Term Project')
     parser.add_argument('--save-path', default='checkpoints/', help="Model's state_dict")
     parser.add_argument('--data', default='data/', type=str, help='data folder')
+
+    parser.add_argument('--epochs', type=int, default=8, help="Number of training epochs")
+    parser.add_argument('--learning-rate', type=float, default=0.03, help="Learning rate")
+    parser.add_argument('--batch-size', type=int, default=5, help="Batch size")
+
+    parser.add_argument('--model', type=str, default='ResNet20', choices=['ResNet9', 'ResNet20'], help="Choose between ResNet9 and ResNet20")
+    
     args = parser.parse_args()
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     args.device = device
     
-    """
-    TODO: Change the hyperparameters.
-            (e.g. change epochs etc.)
-    """
-    
-    # hyperparameters
-    args.epochs = 8
-    args.learning_rate = 0.03
-    args.batch_size = 5
 
     # check settings
     print("==============================")
@@ -137,15 +135,20 @@ if __name__ == '__main__':
     print('Number of usable GPUs:', torch.cuda.device_count())
     
     # Print Hyperparameter
-    print("Batch_size:", args.batch_size)
-    print("learning_rate:", args.learning_rate)
-    print("Epochs:", args.epochs)
+    print(f"Model: {args.model}")
+    print(f"Epochs: {args.epochs}")
+    print(f"Learning rate: {args.learning_rate}")
+    print(f"Batch size: {args.batch_size}")
     print("==============================")
     
     # Make Data loader and Model
     train_loader, validation_loader, _ = make_data_loader(args)
 
-    model = ResNet20()
+    if args.model == 'ResNet9':
+        model = ResNet9()
+    elif args.model == 'ResNet20':
+        model = ResNet20()
+        
     model.to(device)
 
     # Training The Model
