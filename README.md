@@ -28,6 +28,16 @@ The model’s ability to generalize must therefore be high. Data augmentation[[3
 ### Adam Optimizer:
 The project uses Adam[[4]](#4) for optimization, which combines the advantages of RMSProp and Stochastic Gradient Descent (SGD). Adam is widely used due to its adaptive learning rate and momentum.
 
+
+## Model Training
+You can train a ResNet model (either ResNet9 or ResNet20) with customizable hyperparameters. Below is an example of how to use the command-line options.
+### Usage 
+To train with default settings (ResNet20, 8 epochs, batchsize = 5):
+"""
+python train.py --save-path checkpoints/ --data data/
+"""
+
+
 ## Results
 To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss are both used. With the following hyperparameters : 
 - epochs = 8
