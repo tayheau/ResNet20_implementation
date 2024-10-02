@@ -1,3 +1,4 @@
+![resnet](resnet.png)
 # ResNet Model Training and Evaluation
 
 This repo is designed to be used on a google collab instance.
