@@ -18,11 +18,15 @@ According to the original ResNet paper[[1]](#1), the author discusses the case o
 **Table: ResNet parameters for CIFAR-10**
 
 Choosed $n=1$ for simplicity, leading to a ResNet20 architecture.
-### Data Augmentation
-The model’s ability to generalize must therefore be high. Data augmentation  Similarly, to speed up the training process, the dataset is normalized. Thoses transformations are only used on the training set. The validation and testing one are not altered by it.
 
 ### OneCycle Learning Rate Policy: 
 This project utilizes the OneCycleLR scheduler[[2]](#2) to dynamically adjust the learning rate during training, which can lead to faster convergence and better performance.
+
+### Data Augmentation:
+The model’s ability to generalize must therefore be high. Data augmentation[[3]](#3), such as __random cropping__, __flipping__ and __rotation__ are implemented. Similarly, to speed up the training process, the dataset is normalized. Thoses transformations are only used on the training set. The validation and testing one are not altered by it.
+
+### Adam Optimizer:
+The project uses Adam[[4]](#4) for optimization, which combines the advantages of RMSProp and Stochastic Gradient Descent (SGD). Adam is widely used due to its adaptive learning rate and momentum.
 
 ## Results
 To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss are both used. With the following hyperparameters : 
@@ -37,3 +41,5 @@ To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss
 <a id="2">[2]</a> : Leslie N. Smith and Nicholay Topin. *Super-Convergence: Very Fast Training of Neu- ral Networks Using Large Learning Rates.* 2018. arXiv: [1708.07120 [cs.LG]](https://arxiv.org/abs/1708.07120).
 
 <a id="3">[3]</a> : GE Hinton et al. *Improving neural networks by preventing co-adaptation of feature detectors.* 2012. arXiv: [1207.0580 [cs.NE]](https://arxiv.org/abs/1207.0580)
+
+<a id="4">[4]</a> : Diederik P. Kingma and Jimmy Ba. *Adam: A Method for Stochastic Optimization.* 2017. arXiv : [1412.6980 [cs.LG]](https://arxiv.org/abs/1412.6980)
