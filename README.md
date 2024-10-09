@@ -56,10 +56,10 @@ To arrive to the current checkpoint, the Adam Optimizer and the CrossEntropyLoss
   a train accuracy of ~ 91% is achieved on cifar10 with a validation accuracy of 83%.As for testing accuracy, we’re at around 84%, which is a pretty good performance for a model that’s not that deep.
   
 ## Bibliography
-<a id="1">[1]</a> : Kaiming He et al. *Deep Residual Learning for Image Recognition.* 2015. arXiv: [1512. 03385 [cs.CV]](https://arxiv.org/abs/1512.03385).
+<a id="1">[1]</a> : Kaiming He et al. *Deep Residual Learning for Image Recognition.* 2015. [arXiv:1512.03385](https://arxiv.org/abs/1512.03385) [cs.CV].
 
-<a id="2">[2]</a> : Leslie N. Smith and Nicholay Topin. *Super-Convergence: Very Fast Training of Neu- ral Networks Using Large Learning Rates.* 2018. arXiv: [1708.07120 [cs.LG]](https://arxiv.org/abs/1708.07120).
+<a id="2">[2]</a> : Leslie N. Smith and Nicholay Topin. *Super-Convergence: Very Fast Training of Neu- ral Networks Using Large Learning Rates.* 2018. [arXiv:1708.07120](https://arxiv.org/abs/1708.07120) [cs.LG].
 
-<a id="3">[3]</a> : GE Hinton et al. *Improving neural networks by preventing co-adaptation of feature detectors.* 2012. arXiv: [1207.0580 [cs.NE]](https://arxiv.org/abs/1207.0580)
+<a id="3">[3]</a> : GE Hinton et al. *Improving neural networks by preventing co-adaptation of feature detectors.* 2012. [arXiv:1207.0580](https://arxiv.org/abs/1207.0580) [cs.NE].
 
-<a id="4">[4]</a> : Diederik P. Kingma and Jimmy Ba. *Adam: A Method for Stochastic Optimization.* 2017. arXiv : [1412.6980 [cs.LG]](https://arxiv.org/abs/1412.6980)
+<a id="4">[4]</a> : Diederik P. Kingma and Jimmy Ba. *Adam: A Method for Stochastic Optimization.* 2017. [arXiv:1412.6980](https://arxiv.org/abs/1412.6980) [cs.LG]
